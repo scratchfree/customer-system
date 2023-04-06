@@ -12,13 +12,16 @@ public class support implements response_list{
     static int age_of_support;
     static int give_age_of_customer;
     static int give_number_of_ticket;
+
+    static String city_of_customer_d;
     Random random = new Random();
 
-    support(String response, String message_response, int age_of_customer, int number_of_ticket) {
+    support(String response, String message_response, int age_of_customer, int number_of_ticket, String city_of_customer) {
        name_of_customer_list = response;
        message_responsed = message_response;
        give_age_of_customer = age_of_customer;
        give_number_of_ticket = number_of_ticket;
+       city_of_customer_d = city_of_customer;
 
        // Random-ID for Support (as name)
        support_of_id = UUID.randomUUID().toString().replace("-", "");
@@ -36,7 +39,7 @@ public class support implements response_list{
         }
 
         System.out.println("*Customer information: ");
-        System.out.println("Customer name: " + name_of_customer_list + " | Age: " + give_age_of_customer + "\t| Ticket: #" + give_number_of_ticket);
+        System.out.println("Customer name: " + name_of_customer_list + " | Age: " + give_age_of_customer + " | City: " + city_of_customer_d  + " | Ticket: #" + give_number_of_ticket);
         System.out.println(">Response: " + message_responsed);
 
         System.out.println("\t\t\t\t ---- >>");
